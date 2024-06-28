@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import type { Product } from '../components/ProductCard.astro';
+
+const products: Product[] = [
+	{
+		name: 'AI banknotes',
+		description:
+			'lorem ipsum banknoty super no i sieci takie ze hoho lecimy nie spimy dsadhsadasdsadsadsad ' +
+			'aiudsaidj  sapodjasijd oasjdpasjd lorem ipsum adlsadasdddw',
+		productUrl: 'https://www.google.pl/',
+		logoUrl: 'https://picsum.photos/100',
+	},
+];
+for (let i = 0; i < 8; i++) {
+	products.push({
+		name: 'AI banknotes',
+		description:
+			'lorem ipsum banknoty super no i sieci takie ze hoho lecimy nie spimy dsadhsadasdsadsadsad ' +
+			'aiudsaidj  sapodjasijd oasjdpasjd lorem ipsum adlsadasdddw',
+		productUrl: 'https://www.google.pl/',
+		logoUrl: 'https://picsum.photos/100',
+	});
+}
+---
+
+<Layout title="Home | SightGuard">
+	<main>
+		<section class="title-section">
+			<div class="title-container">
+				<h1>SightGuard</h1>
+				<h2>
+					<span class="light">empowering</span>
+					visually impaired
+					<span class="light">with</span>
+					AI solutions
+				</h2>
+			</div>
+		</section>
+	</main>
+	<section class="products-section dark">
+		<h3>Our products</h3>
+		<div class="products-grid">
+			{products.map((product) => <ProductCard product={product} />)}
+		</div>
+	</section>
+	<footer>2024 SightGuard</footer>
+</Layout>
+
+<style>
+	/* container for a section */
+	section {
+		@apply w-full flex flex-col justify-center items-center;
+		@apply px-4 sm:px-14 py-8;
+	}
+
+	/* sections are bright by default */
+	.dark {
+		@apply bg-gray-950 text-gray-100;
+	}
+
+	h1 {
+		@apply text-4xl sm:text-5xl lg:text-7xl font-bold text-primary;
+	}
+
+	h2 {
+		@apply text-2xl sm:text-3xl lg:text-6xl;
+	}
+
+	h3 {
+		@apply text-3xl sm:text-4xl;
+	}
+
+	/* title section */
+
+	.title-section {
+		@apply sm:py-12 lg:py-24;
+	}
+
+	.title-container {
+		@apply flex flex-col gap-4 justify-center;
+	}
+
+	.title-container h2 .light {
+		@apply text-gray-400;
+	}
+
+	/* products section */
+
+	.products-section {
+		@apply gap-10;
+	}
+
+	.products-grid {
+		@apply grid gap-16 grid-cols-1 md:grid-cols-2 xl:grid-cols-3;
+	}
+
+	/* footer */
+
+	footer {
+		@apply w-full py-4 flex justify-center;
+		@apply text-sm bg-gray-950 text-gray-400;
+	}
+</style>
