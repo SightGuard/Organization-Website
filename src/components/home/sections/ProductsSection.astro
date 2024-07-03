@@ -1,0 +1,48 @@
+---
+import ProductCard from '../ProductCard.astro';
+import type { Product } from '../ProductCard.astro';
+
+const products: Product[] = [
+	{
+		name: 'AI banknotes',
+		description:
+			'lorem ipsum banknoty super no i sieci takie ze hoho lecimy nie spimy dsadhsadasdsadsadsad ' +
+			'aiudsaidj  sapodjasijd oasjdpasjd lorem ipsum adlsadasdddw',
+		productUrl: 'https://www.google.pl/',
+		logoPath: 'favicon.png',
+	},
+	{
+		name: 'AI banknotes',
+		description:
+			'lorem ipsum banknoty super no i sieci takie ze hoho lecimy nie spimy dsadhsadasdsadsadsad ' +
+			'aiudsaidj  sapodjasijd oasjdpasjd lorem ipsum adlsadasdddw',
+		productUrl: 'https://www.google.pl/',
+		logoPath: 'favicon.png',
+	},
+	{
+		name: 'AI banknotes',
+		description:
+			'lorem ipsum banknoty super no i sieci takie ze hoho lecimy nie spimy dsadhsadasdsadsadsad ' +
+			'aiudsaidj  sapodjasijd oasjdpasjd lorem ipsum adlsadasdddw',
+		productUrl: 'https://www.google.pl/',
+		logoPath: 'favicon.png',
+	},
+];
+---
+
+<section class="products-section">
+	<h1 class="section-header">Our solutions</h1>
+	<div class="products-grid">
+		{products.map((product) => <ProductCard product={product} />)}
+	</div>
+</section>
+
+<style>
+	.products-section {
+		@apply gap-10;
+	}
+
+	.products-grid {
+		@apply grid gap-16 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 place-items-center;
+	}
+</style>

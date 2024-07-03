@@ -1,0 +1,52 @@
+---
+import { LinkedinIcon, InstagramIcon, FacebookIcon } from 'astro-feather';
+import Logo from '../../Logo.astro';
+
+const socials = {
+	linkedin: 'https://www.google.pl/',
+	instagram: 'https://www.google.pl/',
+	facebook: 'https://www.google.pl/',
+};
+---
+
+<section class="contact-section">
+	<main>
+		<Logo />
+		<div class="contact-container">
+			<h1 class="section-header">Find us</h1>
+			<p>firmowy_email@gmail.com</p>
+			<div class="socials">
+				<a href={socials.linkedin}><LinkedinIcon size={36} /></a>
+				<a href={socials.instagram}><InstagramIcon size={36} /></a>
+				<a href={socials.facebook}><FacebookIcon size={36} /></a>
+			</div>
+		</div>
+	</main>
+	<footer>© 2024 Bright Path</footer>
+</section>
+
+<style>
+	.contact-section {
+		@apply flex flex-col;
+	}
+
+	.contact-section main {
+		@apply grow grid grid-cols-2 gap-6 items-center;
+	}
+
+	.contact-section main p {
+		@apply text-3xl;
+	}
+
+	.contact-container {
+		@apply flex flex-col gap-6;
+	}
+
+	.socials {
+		@apply flex flex-row gap-12;
+	}
+
+	footer {
+		@apply w-full text-sm text-secondary text-center translate-y-6;
+	}
+</style>

@@ -1,0 +1,87 @@
+---
+interface Product {
+	name: string;
+	description: string;
+	logoPath?: string;
+	productUrl?: string;
+}
+
+interface Props {
+	product: Product;
+}
+
+const { product } = Astro.props;
+
+export type { Product };
+---
+
+<div class="container">
+	<div class="card">
+		<main>
+			<h4>{product.name}</h4>
+			<p>{product.description}</p>
+		</main>
+		<footer>
+			<a href={product.productUrl} target="_blank">Read more →</a>
+		</footer>
+	</div>
+	<div class="overlay">
+		<img src={product.logoPath} height="100" width="100" />
+		<h3>{product.name}</h3>
+	</div>
+</div>
+
+<style>
+	.container {
+		@apply relative w-96 h-72 border border-secondary rounded-xl;
+	}
+
+	.container > div {
+		@apply rounded-xl w-full h-full absolute top-0 left-0;
+		@apply transition-opacity duration-300;
+	}
+
+	/* main content */
+
+	h4,
+	h3 {
+		@apply text-2xl font-semibold;
+	}
+
+	h4 {
+		@apply w-full border-b border-secondary mb-2;
+	}
+
+	p {
+		@apply text-lg w-full;
+	}
+
+	a {
+		@apply text-secondary underline;
+	}
+
+	/* 
+	md and larger: hover over container to show the card
+	smaller: overlay invisible => card always visible
+	*/
+
+	.card {
+		@apply p-4;
+		@apply flex flex-col justify-between items-end;
+		@apply md:opacity-0;
+	}
+
+	.overlay {
+		@apply invisible md:visible;
+		@apply -z-10 bg-primary;
+		@apply flex flex-col justify-center items-center gap-2;
+	}
+
+	.container:hover .card {
+		@apply opacity-100;
+	}
+
+	.container:hover .overlay {
+		@apply opacity-0;
+	}
+</style>

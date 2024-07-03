@@ -64,3 +64,7 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 ### How to deploy:
 
 https://docs.astro.build/en/guides/deploy/
+
+### TODO:
+
+Replace `public/favicon.svg` with our logo

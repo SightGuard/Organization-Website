@@ -1,0 +1,50 @@
+---
+import Logo from '../../Logo.astro';
+---
+
+<section class="title-section">
+	<Logo />
+	<div class="title-container">
+		<div class="title-content-container">
+			<h2>Changing the world with <strong>AI</strong> solutions</h2>
+			<a href="#about" class="learn-more">Learn more</a>
+		</div>
+		<div class="ball-container">
+			<div class="ball"></div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.title-container {
+		@apply grow flex flex-row;
+	}
+
+	.title-content-container {
+		@apply flex flex-col gap-28 justify-center;
+	}
+
+	h2 {
+		@apply text-8xl font-semibold -translate-x-12 w-[930px];
+	}
+
+	.learn-more {
+		@apply bg-gradient-to-r from-secondary to-accent;
+		@apply rounded-full py-6 px-16 w-fit text-xl font-semibold tracking-wider;
+	}
+
+	.ball-container {
+		@apply overflow-visible relative flex justify-center items-center -z-10 -translate-x-28;
+	}
+
+	.ball {
+		@apply w-[75vh] h-[75vh] rounded-full;
+		background: radial-gradient(
+			circle,
+			theme(colors.accent) 0%,
+			theme(colors.ball-outer) 25%,
+			theme(colors.ball-outer) 50%,
+			theme(colors.primary) 70%
+		);
+	}
+</style>

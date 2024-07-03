@@ -4,7 +4,10 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				primary: '#034694',
+				primary: '#101728', // background
+				secondary: '#9340FF', // purple
+				accent: '#FF3C5F', // red
+				'ball-outer': '#1F41BB',
 			},
 		},
 	},
