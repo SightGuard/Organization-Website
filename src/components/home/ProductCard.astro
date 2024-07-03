@@ -33,7 +33,7 @@ export type { Product };
 
 <style>
 	.container {
-		@apply relative w-96 h-72 border border-secondary rounded-xl;
+		@apply relative w-96 h-72 rounded-xl;
 	}
 
 	.container > div {
@@ -49,7 +49,7 @@ export type { Product };
 	}
 
 	h4 {
-		@apply w-full border-b border-secondary mb-2;
+		@apply w-full border-b mb-2;
 	}
 
 	p {
@@ -57,7 +57,7 @@ export type { Product };
 	}
 
 	a {
-		@apply text-secondary underline;
+		@apply underline font-semibold;
 	}
 
 	/* 
@@ -66,14 +66,14 @@ export type { Product };
 	*/
 
 	.card {
-		@apply p-4;
+		@apply p-4 bg-gradient-to-br from-secondary via-secondary to-accent;
 		@apply flex flex-col justify-between items-end;
 		@apply md:opacity-0;
 	}
 
 	.overlay {
 		@apply invisible md:visible;
-		@apply -z-10 bg-primary;
+		@apply -z-10 bg-primary border border-secondary;
 		@apply flex flex-col justify-center items-center gap-2;
 	}
 
