@@ -1,70 +1,80 @@
-# Astro Starter Kit: Basics
+# Bright Path Official Website
 
-```sh
-npm create astro@latest -- --template basics
+Welcome to the Bright Path official website repository. Bright Path is dedicated to developing cutting-edge AI software. This repository contains the source code for our official website, built with Astro, Node.js, and Tailwind CSS.
+
+## Table of Contents
+
+- [About](#about)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contact](#contact)
+
+## About
+
+The Bright Path website serves as the main online presence for our organization. It provides information about our mission, projects, team, and contact details. The website is designed to be fast, responsive, and easy to maintain.
+
+## Technologies
+
+This project is built using the following technologies:
+
+- [Astro](https://astro.build/): A modern frontend framework for building static websites.
+- [Node.js](https://nodejs.org/): A JavaScript runtime built on Chrome's V8 JavaScript engine.
+- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework for rapid UI development.
+
+## Installation
+
+To set up the project locally, follow these steps:
+
+1. **Clone the repository**:
+
+    ```bash
+    git clone https://github.com/SightGuard/Organization-Website
+    cd Organization-Website
+    ```
+
+2. **Install dependencies**:
+
+    Ensure you have [Node.js](https://nodejs.org/) installed (version 14 or higher). Then, run:
+
+    ```bash
+    npm install
+    ```
+
+3. **Start the development server**:
+
+    ```bash
+    npm start
+    ```
+
+    This will start the Astro development server, and you can view the website at `http://localhost:3000`.
+
+## Usage
+
+### Development
+
+For local development:
+
+```bash
+npm run dev
 ```
+This will start the development server with live reloading enabled.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+### Building for Production
+To build the project for production:
+```bash
+npm run build
 ```
+The output will be generated in the dist directory. You can then deploy the contents of this directory to your hosting provider.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Previewing Production Build
+To preview the production build locally:
+```bash
+npm run preview
+```
+This will serve the contents of the dist directory at http://localhost:3000.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Contact
+If you have any questions or would like to join us, please contact us at contact@brightpath.org.
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## INFO
-
-### How to run locally:
-
-1. (one-time only) `npm install`
-2. `npm run dev`
-3. Visit `localhost:4321`
-
-### How to deploy:
-
-https://docs.astro.build/en/guides/deploy/
-
-### TODO:
-
-Replace `public/favicon.svg` with our logo
+Thank you for intrest in the Bright Path!
