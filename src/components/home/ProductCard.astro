@@ -33,7 +33,7 @@ export type { Product };
 
 <style>
 	.card-container {
-		@apply relative w-96 h-72 rounded-xl;
+		@apply relative w-72 h-56 sm:w-80 sm:h-64 lg:w-96 lg:h-72 rounded-xl;
 	}
 
 	.card-container > div {
@@ -45,7 +45,7 @@ export type { Product };
 
 	h4,
 	h3 {
-		@apply text-2xl font-semibold;
+		@apply text-lg sm:text-xl lg:text-2xl font-semibold;
 	}
 
 	h4 {
@@ -53,7 +53,7 @@ export type { Product };
 	}
 
 	p {
-		@apply text-lg w-full;
+		@apply text-sm sm:text-base lg:text-lg w-full;
 	}
 
 	a {
@@ -68,11 +68,11 @@ export type { Product };
 	.card {
 		@apply p-4 bg-gradient-to-br from-secondary via-secondary to-accent;
 		@apply flex flex-col justify-between items-end;
-		@apply md:opacity-0;
+		@apply lg:opacity-0;
 	}
 
 	.overlay {
-		@apply invisible md:visible;
+		@apply invisible lg:visible;
 		@apply -z-10 bg-primary border border-secondary;
 		@apply flex flex-col justify-center items-center gap-2;
 	}

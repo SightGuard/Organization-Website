@@ -30,7 +30,7 @@ const products: Product[] = [
 ];
 ---
 
-<section class="products-section">
+<section class="products-section" id="products">
 	<h1 class="section-header">Our solutions</h1>
 	<div class="products-grid">
 		{products.map((product) => <ProductCard product={product} />)}
@@ -43,6 +43,6 @@ const products: Product[] = [
 	}
 
 	.products-grid {
-		@apply grow grid gap-16 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 place-items-center;
+		@apply lg:grow grid gap-16 grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 place-items-center;
 	}
 </style>

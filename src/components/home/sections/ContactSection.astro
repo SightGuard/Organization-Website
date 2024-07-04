@@ -31,15 +31,20 @@ const socials = {
 	}
 
 	.contact-section main {
-		@apply grow grid grid-cols-2 gap-6 items-start;
+		@apply grow flex flex-col;
+		@apply md:grid md:grid-cols-2 md:gap-6 md:items-start;
+	}
+
+	.contact-section main h1 {
+		@apply text-5xl;
 	}
 
 	.contact-section main p {
-		@apply text-3xl;
+		@apply text-lg md:text-2xl lg:text-3xl;
 	}
 
 	.contact-container {
-		@apply flex flex-col gap-6 justify-center h-full;
+		@apply flex flex-col gap-6 justify-center grow h-full items-center md:items-start;
 	}
 
 	.socials {
@@ -47,6 +52,6 @@ const socials = {
 	}
 
 	footer {
-		@apply w-full text-sm text-secondary text-center translate-y-6;
+		@apply w-full text-sm text-secondary text-center lg:translate-y-6;
 	}
 </style>

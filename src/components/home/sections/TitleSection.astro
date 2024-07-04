@@ -17,28 +17,43 @@ import Logo from '../../Logo.astro';
 
 <style>
 	.title-container {
-		@apply grow flex flex-row;
+		@apply relative grow flex flex-row;
 	}
 
 	.title-content-container {
-		@apply flex flex-col gap-28 justify-center;
+		@apply flex flex-col justify-center z-20;
+		@apply gap-12 md:gap-16 lg:gap-20 xl:gap-28;
 	}
 
 	h2 {
-		@apply text-8xl font-semibold -translate-x-12 w-[930px];
+		@apply text-4xl max-w-[350px] font-semibold -translate-x-2;
+		@apply sm:text-5xl sm:w-[470px] sm:max-w-none sm:-translate-x-4;
+		@apply lg:-translate-x-12;
+		@apply xl:text-6xl xl:w-[600px];
+		@apply 2xl:text-8xl 2xl:w-[930px];
 	}
 
 	.learn-more {
 		@apply bg-gradient-to-r from-secondary to-accent;
-		@apply rounded-full py-6 px-16 w-fit text-xl font-semibold tracking-wider;
+		@apply rounded-full w-fit font-semibold tracking-wider;
+		@apply py-3 px-6 text-xs;
+		@apply sm:px-8 sm:text-sm;
+		@apply xl:py-5 xl:px-12 xl:text-lg;
+		@apply 2xl:py-6 2xl:px-16 2xl:text-xl;
 	}
 
 	.ball-container {
-		@apply overflow-visible relative flex justify-center items-center -z-10 -translate-x-28;
+		@apply flex justify-center items-center;
+		@apply absolute top-0 left-0 h-full w-full z-10;
+		@apply lg:static lg:h-auto lg:w-auto lg:-translate-x-28;
 	}
 
 	.ball {
-		@apply w-[75vh] h-[75vh] rounded-full;
+		@apply rounded-full;
+		@apply w-[90vw] h-[90vw];
+		@apply md:w-[70vw] md:h-[70vw];
+		@apply lg:w-[45vw] lg:h-[45vw];
+		@apply xl:w-[70vh] xl:h-[70vh];
 		background: radial-gradient(
 			circle,
 			theme(colors.accent) 0%,
