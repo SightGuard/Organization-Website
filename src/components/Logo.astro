@@ -1,0 +1,29 @@
+<div class="logo-container">
+	<img src="favicon.png" alt="Bright Path logo" height="52" width="52" />
+	<div class="text-container">
+		<h1>Bright Path</h1>
+		<p>AI for tomorrow</p>
+	</div>
+</div>
+
+<style>
+	.logo-container {
+		@apply flex flex-row gap-4 items-center w-fit;
+	}
+
+	.text-container {
+		@apply flex flex-col w-full justify-center;
+	}
+
+	.logo-container img {
+		@apply h-10 w-10 sm:h-14 sm:w-14;
+	}
+
+	.logo-container h1 {
+		@apply text-xl sm:text-3xl font-bold;
+	}
+
+	.logo-container p {
+		@apply text-xs sm:text-lg font-semibold;
+	}
+</style>

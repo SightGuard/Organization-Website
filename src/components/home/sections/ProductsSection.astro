@@ -1,0 +1,43 @@
+---
+import ProductCard from '../ProductCard.astro';
+import type { Product } from '../ProductCard.astro';
+
+const products: Product[] = [
+	{
+		name: 'academia package',
+		description:
+			'Academia provides easy-to-use tools for investigating the impact of Curriculum ' +
+			'Learning on the performance of deep reinforcement learning agents. Our tools ' +
+			'are designed to provide a clear and concise view of the performance of your agents.',
+		productUrl: 'https://pypi.org/project/academia-rl/',
+		logoPath: 'favicon.png',
+	},
+	{
+		name: 'Sight Guard',
+		description:
+			'Application dedicated for visually impaired people which helps them to ' +
+			'recognize bills in different currencies and distinguish different colors. ' + 
+			'Application is available on Android and is avable for free.',
+			
+		productUrl: 'https://www.google.pl/',
+		logoPath: 'favicon.png',
+	},
+];
+---
+
+<section class="products-section" id="products">
+	<h1 class="section-header">Our solutions</h1>
+	<div class="products-grid">
+		{products.map((product) => <ProductCard product={product} />)}
+	</div>
+</section>
+
+<style>
+	.products-section {
+		@apply gap-12;
+	}
+
+	.products-grid {
+		@apply lg:grow grid gap-16 grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 place-items-center;
+	}
+</style>
